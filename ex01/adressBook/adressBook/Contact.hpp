@@ -14,11 +14,11 @@
 class Contact {
     //MARK: Properties, but I think struct is more relevant here
 private:
-    std::string first_name;
-    std::string last_name;
-    std::string nickname;
-    std::string phone_number;
-    std::string darkest_secret;
+    std::string firstName;
+    std::string lastName;
+    std::string nickName;
+    std::string phoneNumber;
+    std::string darkestSecret;
 
     //MARK: Consructors vs Destructors
     
@@ -28,11 +28,11 @@ public:
     ~Contact (void){};
     
     // MARK: methods
-    
-//    void add(void) const;
-//    void exit(void) const;
-//    void search(void) const;
-//    
+    void setFirstName();
+    void setLastName();
+    void setNickName();
+    void setPhoneNumber();
+    void setDarkestSecret();
 
 };
 

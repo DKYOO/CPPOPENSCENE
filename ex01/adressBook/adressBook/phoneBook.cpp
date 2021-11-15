@@ -8,8 +8,11 @@
 #include "phoneBook.hpp"
 
 void PhoneBook::addContact() {
-    std::string Jopa;
-    std::getline(std::cin, Jopa);
     
-    std::cout << Jopa << std::endl;
+    array[0].setFirstName();
+    array[0].setLastName();
+    array[0].setNickName();
+    array[0].setPhoneNumber();
+    array[0].setDarkestSecret();
+   
 }

@@ -26,6 +26,7 @@ void PhoneBook::addContact() {
 
 void PhoneBook::search() {
     int newIndex = 0;
+    
     while (array[newIndex].getFull()) {
         
         std::cout << newIndex << std::endl;

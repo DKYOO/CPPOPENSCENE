@@ -20,6 +20,8 @@ private:
     
 public:
     void addContact(void);
+    void search(void);
+    
     
 // Contrucors vs Destructors
     

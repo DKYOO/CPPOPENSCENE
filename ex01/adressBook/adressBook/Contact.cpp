@@ -7,6 +7,14 @@
 
 #include "Contact.hpp"
 
+//MARK: construstor
+Contact::Contact() {
+    full = false;
+}
+
+
+
+//MARK: Methods
 void Contact::setFirstName() {
     
     std::cout << "Please ADD First Name     🙏" << std::endl;
@@ -35,6 +43,29 @@ void Contact::setPhoneNumber() {
 void Contact::setDarkestSecret() {
     std::cout << "Please ADD Darkest Secret 👻" << std::endl;
     std::getline(std::cin, darkestSecret);
-    std::cout << "Pizdec CYKA Bl9Db" << std::endl;
-    
+    full = true;
+}
+
+std::string Contact::getFirstName() {
+    return firstName;
+}
+
+std::string Contact::getLastName() {
+    return lastName;
+}
+
+std::string Contact::getNickName() {
+    return nickName;
+}
+
+std::string Contact::getPhoneNumber() {
+    return phoneNumber;
+}
+
+std::string Contact::getDarkestSecret() {
+    return darkestSecret;
+}
+
+bool Contact::getFull() {
+    return full;
 }

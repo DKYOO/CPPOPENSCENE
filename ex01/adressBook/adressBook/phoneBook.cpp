@@ -9,10 +9,29 @@
 
 void PhoneBook::addContact() {
     
-    array[0].setFirstName();
-    array[0].setLastName();
-    array[0].setNickName();
-    array[0].setPhoneNumber();
-    array[0].setDarkestSecret();
+    
+    
+    array[index].setFirstName();
+    array[index].setLastName();
+    array[index].setNickName();
+    array[index].setPhoneNumber();
+    array[index].setDarkestSecret();
+    index ++;
+    
+    if (index == 8) {
+        index = 0;
+    }
    
+}
+
+void PhoneBook::search() {
+    int newIndex = 0;
+    while (array[newIndex].getFull()) {
+        
+        std::cout << newIndex << std::endl;
+        std::cout << array[newIndex].getFirstName() << std::endl;
+        std::cout << array[newIndex].getLastName() << std::endl;
+        std::cout << array[newIndex].getNickName() << std::endl;
+        newIndex++;
+    }
 }

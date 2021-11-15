@@ -19,21 +19,31 @@ private:
     std::string nickName;
     std::string phoneNumber;
     std::string darkestSecret;
+    bool full;
 
     //MARK: Consructors vs Destructors
     
 public:
     
-    Contact (void){};
+    Contact (void);
     ~Contact (void){};
     
     // MARK: methods
+    
+    //setters
     void setFirstName();
     void setLastName();
     void setNickName();
     void setPhoneNumber();
     void setDarkestSecret();
-
+    //getters
+    
+    std::string getFirstName();
+    std::string getLastName();
+    std::string getNickName();
+    std::string getPhoneNumber();
+    std::string getDarkestSecret();
+    bool getFull();
 };
 
 

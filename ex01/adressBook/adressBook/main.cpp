@@ -5,11 +5,15 @@
 //  Created by Dmitry Kaveshnikov on 10/30/21.
 //
 
-#include <iostream>
+#include "phoneBook.hpp"
+#include "Contact.hpp"
+
 
 int main(int ac, char **av) {
-    // insert code here...
-    std::cout << "Hello, World!\n" << std::endl;
-    return 0;
+  
+	PhoneBook Jopa;
+	Jopa.addContact();
+	
+	return 0;
 }
 

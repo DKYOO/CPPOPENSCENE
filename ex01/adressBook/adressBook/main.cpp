@@ -13,7 +13,7 @@ int main(int ac, char **av) {
 	PhoneBook Jopa;
 	
 	while (1) {
-		std::cout << "Please ENTER FUCKING Command 😊" << std::endl;
+		std::cout << "Please ENTER Command 😊" << std::endl;
 		std::getline(std::cin, command);
 		if (command == "ADD") {
 			Jopa.addContact();
@@ -21,12 +21,14 @@ int main(int ac, char **av) {
 		}
 		else if (command == "SEARCH") {
 			Jopa.search();
+            std::cout << "Enter Index 💚" << std::endl;
+//            Jopa.indexSearch();
 		}
 		else if (command == "EXIT") {
 			break;
 		}
 		else {
-			std::cout << "Poshel NAXUI, ПЁС 🐶" << std::endl;
+			std::cout << "NO NO NO 🐶" << std::endl;
 		}
 	}
 	return 0;

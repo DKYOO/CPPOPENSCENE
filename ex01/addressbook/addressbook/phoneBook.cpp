@@ -29,21 +29,21 @@ void PhoneBook::search() {
     //Create table with "\" and . 10 symblos long
     while (array[newIndex].getFull()) {
         
-        std::cout << newIndex << "|" << std::setw(10);
+        std::cout << std::setw(10) << newIndex << "|" ;
         if (array[newIndex].getFirstName().length() > 9) {
-            std::cout << array[newIndex].getFirstName().substr(0, 9) << "." << "|" << std::setw(10);
+            std::cout << std::setw(10) <<  array[newIndex].getFirstName().substr(0, 9) << "."  << "|";
         } else {
-            std::cout << array[newIndex].getFirstName() << "|" << std::setw(10);
+            std::cout << std::setw(10) << array[newIndex].getFirstName() << "|" ;
         }
         if (array[newIndex].getLastName().length() > 9) {
-            std::cout << array[newIndex].getLastName().substr(0, 9) << "." << "|" << std::setw(10);
+            std::cout << std::setw(10) << array[newIndex].getLastName().substr(0, 9) << "." << "|";
         } else {
-            std::cout << array[newIndex].getLastName() << "|" << std::setw(10);
+            std::cout << std::setw(10) << array[newIndex].getLastName() << "|" ;
         }
         if (array[newIndex].getNickName().length() > 9) {
-            std::cout << array[newIndex].getNickName().substr(0, 9) << "." << "|" << std::setw(10) << std::endl;
+            std::cout << std::setw(10) << array[newIndex].getNickName().substr(0, 9) << "."  << "|" << std::endl;
         } else {
-        std::cout << array[newIndex].getNickName() << "|" << std::setw(10) << std::endl;
+        std::cout << std::setw(10) << array[newIndex].getNickName() << "|"  << std::endl;
         }
         newIndex++;
     }

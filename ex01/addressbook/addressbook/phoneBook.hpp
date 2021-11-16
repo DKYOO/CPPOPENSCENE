@@ -22,7 +22,7 @@ private:
 public:
     void addContact(void);
     void search(void);
-    void indexSearch(void);
+//    void indexSearch(void);
     
     
 // Contrucors vs Destructors

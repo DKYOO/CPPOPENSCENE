@@ -30,34 +30,34 @@ void PhoneBook::search() {
     while (array[newIndex].getFull()) {
         
         std::cout << std::setw(10) << newIndex << "|" ;
-        if (array[newIndex].getFirstName().length() > 9) {
+        if (array[newIndex].getFirstName().length() > 10) {
             std::cout << std::setw(10) <<  array[newIndex].getFirstName().substr(0, 9) << "."  << "|";
         } else {
             std::cout << std::setw(10) << array[newIndex].getFirstName() << "|" ;
         }
-        if (array[newIndex].getLastName().length() > 9) {
+        if (array[newIndex].getLastName().length() > 10) {
             std::cout << std::setw(10) << array[newIndex].getLastName().substr(0, 9) << "." << "|";
         } else {
             std::cout << std::setw(10) << array[newIndex].getLastName() << "|" ;
         }
-        if (array[newIndex].getNickName().length() > 9) {
+        if (array[newIndex].getNickName().length() > 10) {
             std::cout << std::setw(10) << array[newIndex].getNickName().substr(0, 9) << "."  << "|" << std::endl;
         } else {
-        std::cout << std::setw(10) << array[newIndex].getNickName() << "|"  << std::endl;
+            std::cout << std::setw(10) << array[newIndex].getNickName() << "|"  << std::endl;
         }
         newIndex++;
     }
     
 }
 
-void PhoneBook::indexSearch() {
-    //    int enteredIndex;
-    //
-    //    if (indexIsEntered()) {
-    //        std::cout << array[enteredIndex].getFirstName() << std::endl;
-    //        std::cout << array[enteredIndex].getLastName() << std::endl;
-    //        std::cout << array[enteredIndex].getNickName() << std::endl;
-    //        std::cout << array[enteredIndex].getPhoneNumber() << std::endl;
-    //        std::cout << array[enteredIndex].getDarkestSecret() << std::endl;
-    //    }
-}
+//void PhoneBook::indexSearch() {
+//        int enteredIndex;
+//    
+//        if (command == this->index) {
+//            std::cout << array[enteredIndex].getFirstName() << std::endl;
+//            std::cout << array[enteredIndex].getLastName() << std::endl;
+//            std::cout << array[enteredIndex].getNickName() << std::endl;
+//            std::cout << array[enteredIndex].getPhoneNumber() << std::endl;
+//            std::cout << array[enteredIndex].getDarkestSecret() << std::endl;
+//        }
+//}

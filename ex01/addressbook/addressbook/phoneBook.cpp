@@ -52,41 +52,45 @@ void PhoneBook::search() {
     std::cout << "Enter Index 💚" << std::endl;
     std::getline(std::cin, command);
     int som = 0;
-    som = stoi(command) - 1;
-    if (som >= 0 && som < 9 && array[som].getFull()) {
-        std::cout << array[som].getFirstName() << std::endl;
-        std::cout << array[som].getLastName() << std::endl;
-        std::cout << array[som].getNickName() << std::endl;
-        std::cout << array[som].getPhoneNumber() << std::endl;
-        std::cout << array[som].getDarkestSecret() << std::endl;
+    if (isdigit(command[0])) {
+        som = stoi(command) - 1;
+        if (som >= 0 && som < 9 && array[som].getFull()) {
+            std::cout << array[som].getFirstName() << std::endl;
+            std::cout << array[som].getLastName() << std::endl;
+            std::cout << array[som].getNickName() << std::endl;
+            std::cout << array[som].getPhoneNumber() << std::endl;
+            std::cout << array[som].getDarkestSecret() << std::endl;
+        } else {
+            std::cout << "error, enter true Index 💚" << std::endl;
+        }
     } else {
         std::cout << "error, enter true Index 💚" << std::endl;
     }
 }
-
-
-//void PhoneBook::setTableNames() {
-//    index = 0;
-//
-//
-//    array[index].
-////    array[index].setLastName();
-////    array[index].setNickName();
-////    array[index].setPhoneNumber();
-////    array[index].setDarkestSecret();
-//
-//}
-
-//hop
-
-//void PhoneBook::indexSearch() {
-//        int enteredIndex;
-//
-//        if (command == this->index) {
-//            std::cout << array[enteredIndex].getFirstName() << std::endl;
-//            std::cout << array[enteredIndex].getLastName() << std::endl;
-//            std::cout << array[enteredIndex].getNickName() << std::endl;
-//            std::cout << array[enteredIndex].getPhoneNumber() << std::endl;
-//            std::cout << array[enteredIndex].getDarkestSecret() << std::endl;
-//        }
-//}
+        
+        
+        //void PhoneBook::setTableNames() {
+        //    index = 0;
+        //
+        //
+        //    array[index].
+        ////    array[index].setLastName();
+        ////    array[index].setNickName();
+        ////    array[index].setPhoneNumber();
+        ////    array[index].setDarkestSecret();
+        //
+        //}
+        
+        //hop
+        
+        //void PhoneBook::indexSearch() {
+        //        int enteredIndex;
+        //
+        //        if (command == this->index) {
+        //            std::cout << array[enteredIndex].getFirstName() << std::endl;
+        //            std::cout << array[enteredIndex].getLastName() << std::endl;
+        //            std::cout << array[enteredIndex].getNickName() << std::endl;
+        //            std::cout << array[enteredIndex].getPhoneNumber() << std::endl;
+        //            std::cout << array[enteredIndex].getDarkestSecret() << std::endl;
+        //        }
+        //}

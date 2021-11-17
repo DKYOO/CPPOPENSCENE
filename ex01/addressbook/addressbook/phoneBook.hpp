@@ -24,6 +24,7 @@ private:
 public:
     void addContact(void);
     void search(void);
+    void setTableNames(void);
 //    void indexSearch(void);
     
     

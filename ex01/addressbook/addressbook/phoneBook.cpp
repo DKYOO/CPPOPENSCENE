@@ -8,7 +8,7 @@
 #include "phoneBook.hpp"
 
 void PhoneBook::addContact() {
-    
+    index = 1;
     
     
     array[index].setFirstName();
@@ -19,7 +19,7 @@ void PhoneBook::addContact() {
     index ++;
     
     if (index == 8) {
-        index = 0;
+        index = 1;
     }
     
 }
@@ -29,6 +29,7 @@ void PhoneBook::search() {
     std::string command;
     //Create table with "\" and . 10 symblos long
     while (array[newIndex].getFull()) {
+        
         
         std::cout << std::setw(10) << newIndex << "|" ;
         if (array[newIndex].getFirstName().length() > 10) {
@@ -64,6 +65,19 @@ void PhoneBook::search() {
     } else {
         std::cout << "error, enter true Index 💚" << std::endl;
     }
+}
+
+
+void PhoneBook::setTableNames() {
+    index = 0;
+    
+    
+    array[index].
+//    array[index].setLastName();
+//    array[index].setNickName();
+//    array[index].setPhoneNumber();
+//    array[index].setDarkestSecret();
+    
 }
 
 //hop

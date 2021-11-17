@@ -21,7 +21,6 @@ int main(int ac, char **av) {
 		}
 		else if (command == "SEARCH") {
 			Jopa.search();
-            std::cout << "Enter Index 💚" << std::endl;
 //            Jopa.indexSearch();
 		}
 		else if (command == "EXIT") {

@@ -12,7 +12,7 @@ int main(int ac, char **av) {
 	std::string command;
 	PhoneBook Jopa;
 	
-	while (1) {
+	while (!std::cin.eof()) {
 		std::cout << "Please ENTER Command 😊" << std::endl;
 		std::getline(std::cin, command);
 		if (command == "ADD") {

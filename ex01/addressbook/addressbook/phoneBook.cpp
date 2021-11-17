@@ -8,8 +8,6 @@
 #include "phoneBook.hpp"
 
 void PhoneBook::addContact() {
-    index = 1;
-    
     
     array[index].setFirstName();
     array[index].setLastName();
@@ -19,7 +17,7 @@ void PhoneBook::addContact() {
     index ++;
     
     if (index == 8) {
-        index = 1;
+        index = 0;
     }
     
 }
@@ -28,10 +26,11 @@ void PhoneBook::search() {
     int newIndex = 0;
     std::string command;
     //Create table with "\" and . 10 symblos long
+    
+    std::cout << "     Index|First Name| Last Name|  Nickname|" << std::endl;
     while (array[newIndex].getFull()) {
         
-        
-        std::cout << std::setw(10) << newIndex << "|" ;
+        std::cout << std::setw(10) << newIndex + 1 << "|" ;
         if (array[newIndex].getFirstName().length() > 10) {
             std::cout << std::setw(9) <<  array[newIndex].getFirstName().substr(0, 9) << "."  << "|";
         } else {
@@ -53,32 +52,30 @@ void PhoneBook::search() {
     std::cout << "Enter Index 💚" << std::endl;
     std::getline(std::cin, command);
     int som = 0;
-    if ((isdigit(stoi(command))) || (command.length() == 1)) {
-        som = stoi(command);
-        if (som >= 0 && som < 9) {
-            std::cout << array[som].getFirstName() << std::endl;
-            std::cout << array[som].getLastName() << std::endl;
-            std::cout << array[som].getNickName() << std::endl;
-            std::cout << array[som].getPhoneNumber() << std::endl;
-            std::cout << array[som].getDarkestSecret() << std::endl;
-        }
+    som = stoi(command) - 1;
+    if (som >= 0 && som < 9 && array[som].getFull()) {
+        std::cout << array[som].getFirstName() << std::endl;
+        std::cout << array[som].getLastName() << std::endl;
+        std::cout << array[som].getNickName() << std::endl;
+        std::cout << array[som].getPhoneNumber() << std::endl;
+        std::cout << array[som].getDarkestSecret() << std::endl;
     } else {
         std::cout << "error, enter true Index 💚" << std::endl;
     }
 }
 
 
-void PhoneBook::setTableNames() {
-    index = 0;
-    
-    
-    array[index].
-//    array[index].setLastName();
-//    array[index].setNickName();
-//    array[index].setPhoneNumber();
-//    array[index].setDarkestSecret();
-    
-}
+//void PhoneBook::setTableNames() {
+//    index = 0;
+//
+//
+//    array[index].
+////    array[index].setLastName();
+////    array[index].setNickName();
+////    array[index].setPhoneNumber();
+////    array[index].setDarkestSecret();
+//
+//}
 
 //hop
 

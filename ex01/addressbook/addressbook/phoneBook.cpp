@@ -52,7 +52,7 @@ void PhoneBook::search() {
     std::cout << "Enter Index 💚" << std::endl;
     std::getline(std::cin, command);
     int som = 0;
-    if (isdigit(command[0])) {
+    if (isdigit(command[0]) && (command.length() == 1)) {
         som = stoi(command) - 1;
         if (som >= 0 && som < 9 && array[som].getFull()) {
             std::cout << array[som].getFirstName() << std::endl;

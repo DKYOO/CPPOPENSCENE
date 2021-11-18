@@ -8,7 +8,7 @@
 #include "phoneBook.hpp"
 #include "Contact.hpp"
 
-int main(int ac, char **av) {
+int main() {
 	std::string command;
 	PhoneBook Jopa;
 	
